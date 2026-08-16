@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { projects, experience, skills } from '../data/career';
+---
+<Layout title="Teja Gowlla | Manufacturing Engineering, Automation & Productivity" description="Engineer working across manufacturing productivity, automation, electronics, verification and validation, supplier engineering, and medical and semiconductor equipment.">
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Manufacturing · Automation · Engineering Productivity</div>
+      <h1>I solve manufacturing problems by combining engineering, automation and software.</h1>
+      <p class="lede">Teja Gowlla is an engineer working across mechanical manufacturing, productivity, automation, electronics, verification & validation, and supplier engineering for complex products.</p>
+      <div class="actions"><a class="button primary" href="/experience">View experience</a><a class="button" href="/resume">View resume</a></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="proof">
+    <div class="section-head"><div><div class="section-kicker">Proof</div><h2 id="proof">Engineering impact, not keyword collecting.</h2></div><p>The strongest work has a measurable consequence: less cycle time, lower cost, faster validation, or a customer-critical problem retired.</p></div>
+    <div class="proof-grid">
+      <div class="proof"><strong>90%</strong><span>cycle-time reduction from an IMU-based manufacturing fixture</span></div>
+      <div class="proof"><strong>$1M+</strong><span>annual savings from the same fixture-driven improvement</span></div>
+      <div class="proof"><strong>50%</strong><span>test-cycle reduction through Python-based hardware automation</span></div>
+      <div class="proof"><strong>30%</strong><span>less trial-and-error time through assembly simulation</span></div>
+      <div class="proof"><strong>5%</strong><span>wet-deposition tool cycle-time improvement</span></div>
+      <div class="proof"><strong>$120k/yr</strong><span>estimated saving opportunity from an AI/LLM TPI automation project</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="what">
+    <div class="section-head"><div><div class="section-kicker">What I do</div><h2 id="what">Bridge the gaps between disciplines.</h2></div><p>The useful work often sits between boxes on an org chart. Mechanical constraints, electronics, software, manufacturing reality and validation have to agree.</p></div>
+    <div class="cap-grid">
+      <div class="cap"><h3>Manufacturing Productivity</h3><p>Find bottlenecks, reduce cycle time, eliminate wasted motion and turn process problems into measurable improvements.</p></div>
+      <div class="cap"><h3>Automation & Digital Engineering</h3><p>Automate repetitive testing and engineering workflows with Python, computer vision, AI/LLM approaches and simulation.</p></div>
+      <div class="cap"><h3>Product & Process Engineering</h3><p>Translate product requirements into practical assembly, fixture and manufacturing solutions.</p></div>
+      <div class="cap"><h3>Verification & Validation</h3><p>Lead hardware validation and risk-retirement work where evidence matters as much as the design.</p></div>
+      <div class="cap"><h3>Supplier Engineering</h3><p>Work directly with suppliers through prototypes, documentation, process transfer, V&V and manufacturing readiness.</p></div>
+      <div class="cap"><h3>Cross-functional Engineering</h3><p>Connect mechanical, electrical, software, manufacturing, quality and field teams to get difficult work finished.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="work">
+    <div class="section-head"><div><div class="section-kicker">Selected work</div><h2 id="work">Five problems worth remembering.</h2></div><p>These are the projects that best explain how I think: understand the physical process, remove the bottleneck, automate where it helps, then prove the result.</p></div>
+    <div class="project-grid">
+      {projects.map((project) => <article class="project"><div class="eyebrow">{project.tag}</div><h3>{project.title}</h3><p>{project.problem}</p><p class="result">{project.result}</p></article>)}
+    </div>
+    <div class="actions"><a class="button" href="/projects">Explore engineering work →</a></div>
+  </section>
+
+  <section aria-labelledby="experience">
+    <div class="section-head"><div><div class="section-kicker">Experience</div><h2 id="experience">Semiconductor equipment to medical imaging.</h2></div><p>Experience spans manufacturing engineering, productivity, supplier transitions, validation and product engineering across complex hardware.</p></div>
+    <div class="timeline">
+      {experience.slice(0,2).map((role) => <article class="role"><div class="meta"><strong>{role.company}</strong><br />{role.period}</div><div><h3>{role.role}</h3><p>{role.summary}</p></div></article>)}
+    </div>
+    <div class="actions"><a class="button" href="/experience">Full experience →</a></div>
+  </section>
+
+  <section aria-labelledby="skills">
+    <div class="section-head"><div><div class="section-kicker">Technical stack</div><h2 id="skills">Tools are useful. Context is the differentiator.</h2></div><p>Capabilities are grouped by the engineering problem they support rather than turned into a meaningless proficiency scoreboard.</p></div>
+    <div class="skill-grid">
+      {Object.entries(skills).slice(0,4).map(([name, list]) => <div class="skill"><h3>{name}</h3><div class="pill-list">{list.map(item => <span class="pill">{item}</span>)}</div></div>)}
+    </div>
+    <div class="actions"><a class="button" href="/skills">See all skills →</a></div>
+  </section>
+
+  <section><div class="contact"><div><div class="section-kicker">Next</div><h2>Looking for hard engineering problems.</h2></div><div><p class="lede">Manufacturing automation, engineering productivity, semiconductor equipment, medical devices, supplier engineering and technical problem solving are where this experience is most useful.</p><div class="actions"><a class="button primary" href="/contact">Contact</a><a class="button" href="/resume">Resume</a></div></div></div></section>
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context':'https://schema.org', '@type':'Person', name:'Teja Gowlla', url:'https://teja.gowlla.in', jobTitle:'Manufacturing / Productivity Engineer', knowsAbout:['Manufacturing Engineering','Engineering Productivity','Automation','Mechanical Engineering','Electronics','Verification and Validation','Supplier Engineering','Medical Devices','Semiconductor Manufacturing'] })} />
+</Layout>

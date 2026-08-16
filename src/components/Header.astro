@@ -1,0 +1,11 @@
+---
+const items = [
+  ['/', 'Home'], ['/experience', 'Experience'], ['/projects', 'Projects'], ['/skills', 'Skills'], ['/resume', 'Resume'], ['/contact', 'Contact']
+];
+---
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Teja Gowlla home"><span class="brand-mark">TG</span><span>Teja Gowlla</span></a>
+  <nav aria-label="Primary navigation">
+    {items.map(([href, label]) => <a href={href} class={Astro.url.pathname === href ? 'active' : ''}>{label}</a>)}
+  </nav>
+</header>
