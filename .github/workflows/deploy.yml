@@ -7,12 +7,12 @@ on:
 
 permissions:
   contents: read
-  pages: write
+  pages: read
   id-token: write
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -20,22 +20,51 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
+
       - name: Install dependencies
-        run: npm install
-      - name: Build
+        run: npm ci
+
+      - name: Build Astro site
         run: npm run build
+
+      - name: Verify static output
+        run: |
+          test -f dist/index.html
+          test -f dist/sitemap-index.xml
+          test -f dist/robots.txt
+          test -f dist/CNAME
+          test -d dist/experience
+          test -d dist/projects
+          test -d dist/skills
+          test -d dist/resume
+          test -d dist/contact
+          echo "Astro output verified."
+
       - name: Setup Pages
+        id: pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./dist
-      - name: Deploy
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
