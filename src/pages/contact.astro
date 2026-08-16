@@ -1,7 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = Astro.url.pathname === '/career' || Astro.url.pathname.startsWith('/career/') ? '/career' : '';
 ---
-<Layout title="Contact | Teja Gowlla" description="Contact Teja Gowlla for engineering opportunities involving manufacturing, automation, productivity and complex hardware.">
+<Layout title="Contact | Teja K G" description="Contact Teja K G for engineering opportunities involving manufacturing, automation, productivity and complex hardware.">
   <div class="page-intro"><div class="eyebrow">Contact</div><h1>Talk about the engineering problem.</h1><p>For roles or collaborations involving manufacturing engineering, automation, productivity, supplier engineering, medical devices or semiconductor equipment.</p></div>
-  <section><div class="contact"><div><h2>Professional links</h2><p class="muted">Only intentionally public routes are listed here. No home address or private phone number belongs on a career website.</p></div><div class="contact-list"><a class="contact-link" href="https://github.com/tejakg">GitHub ↗</a><a class="contact-link" href="/resume">Resume →</a></div></div></section>
+  <section><div class="contact"><div><h2>Professional links</h2><p class="muted">Only intentionally public routes are listed here. No home address or private phone number belongs on a career website.</p></div><div class="contact-list"><a class="contact-link" href="https://github.com/tejakg">GitHub ↗</a><a class="contact-link" href={`${base}/resume`}>Resume →</a></div></div></section>
 </Layout>
