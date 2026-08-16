@@ -1,10 +1,13 @@
 ---
-import '../styles/global.css';
+import stylesUrl from '../styles/global.css?url';
 import Header from '../components/Header.astro';
 
 export interface Props { title: string; description: string; path?: string; }
 const { title, description, path = Astro.url.pathname } = Astro.props;
 const canonical = new URL(path, Astro.site);
+const projectBase = Astro.url.pathname === '/career' || Astro.url.pathname.startsWith('/career/') ? '/career' : '';
+const stylesheet = `${projectBase}${stylesUrl}`;
+const favicon = `${projectBase}/favicon.svg`;
 ---
 <html lang="en">
   <head>
@@ -21,13 +24,14 @@ const canonical = new URL(path, Astro.site);
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="theme-color" content="#0b0d10" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href={favicon} type="image/svg+xml" />
+    <link rel="stylesheet" href={stylesheet} />
   </head>
   <body>
-    <Header />
+    <Header base={projectBase} />
     <main><slot /></main>
     <footer class="site-footer">
-      <div><strong>Teja Gowlla</strong><span> · Engineering productivity, manufacturing & automation</span></div>
+      <div><strong>Teja K G</strong><span> · Engineering productivity, manufacturing & automation</span></div>
       <div>© {new Date().getFullYear()} · Built as a static site</div>
     </footer>
   </body>
