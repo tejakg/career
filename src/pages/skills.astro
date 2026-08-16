@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { skills } from '../data/career';
 ---
-<Layout title="Skills | Teja Gowlla" description="Technical capabilities across manufacturing, automation, programming, simulation, validation, product engineering and electronics.">
+<Layout title="Skills | Teja K G" description="Technical capabilities across manufacturing, automation, programming, simulation, validation, product engineering and electronics.">
   <div class="page-intro"><div class="eyebrow">Skills</div><h1>A cross-disciplinary engineering toolkit.</h1><p>The value is in combining these capabilities around a manufacturing or product problem, not in claiming arbitrary percentages of proficiency.</p></div>
   <section><div class="skill-grid">{Object.entries(skills).map(([name, list]) => <div class="skill"><h2>{name}</h2><div class="pill-list">{list.map(item => <span class="pill">{item}</span>)}</div></div>)}</div></section>
 </Layout>
