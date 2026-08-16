@@ -1,11 +1,18 @@
 ---
+interface Props { base?: string; }
+const { base = '' } = Astro.props;
 const items = [
-  ['/', 'Home'], ['/experience', 'Experience'], ['/projects', 'Projects'], ['/skills', 'Skills'], ['/resume', 'Resume'], ['/contact', 'Contact']
+  ['', 'Home'], ['/experience/', 'Experience'], ['/projects/', 'Projects'], ['/skills/', 'Skills'], ['/resume/', 'Resume'], ['/contact/', 'Contact']
 ];
+const current = Astro.url.pathname.replace(/\/+$/, '') || '/';
 ---
 <header class="site-header">
-  <a class="brand" href="/" aria-label="Teja Gowlla home"><span class="brand-mark">TG</span><span>Teja Gowlla</span></a>
+  <a class="brand" href={`${base}/`} aria-label="Teja K G home"><span class="brand-mark">TG</span><span>Teja K G</span></a>
   <nav aria-label="Primary navigation">
-    {items.map(([href, label]) => <a href={href} class={Astro.url.pathname === href ? 'active' : ''}>{label}</a>)}
+    {items.map(([href, label]) => {
+      const target = `${base}${href || '/'}`;
+      const normalizedTarget = target.replace(/\/+$/, '') || '/';
+      return <a href={target} class={current === normalizedTarget ? 'active' : ''}>{label}</a>;
+    })}
   </nav>
 </header>
