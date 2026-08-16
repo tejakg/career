@@ -1,7 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = Astro.url.pathname === '/career' || Astro.url.pathname.startsWith('/career/') ? '/career' : '';
 ---
-<Layout title="Resume | Teja Gowlla" description="Resume and professional profile for Teja Gowlla, an engineer focused on manufacturing productivity, automation and complex hardware.">
+<Layout title="Resume | Teja K G" description="Resume and professional profile for Teja K G, an engineer focused on manufacturing productivity, automation and complex hardware.">
   <div class="page-intro"><div class="eyebrow">Resume</div><h1>The concise version.</h1><p>The repository currently contains a placeholder Resume.md and does not contain a Resume.pdf. The website therefore links to the master resume source rather than pretending a PDF exists.</p></div>
-  <section><div class="contact"><div><h2>Master resume</h2><p class="muted">The canonical resume file lives in the career repository. Keep that document optimized for applications; use this site for deeper context.</p></div><div class="contact-list"><a class="contact-link" href="https://github.com/tejakg/career/blob/main/Resume.md">Open Resume.md ↗</a><a class="contact-link" href="/experience">Read the web version →</a></div></div></section>
+  <section><div class="contact"><div><h2>Master resume</h2><p class="muted">The canonical resume file lives in the career repository. Keep that document optimized for applications; use this site for deeper context.</p></div><div class="contact-list"><a class="contact-link" href="https://github.com/tejakg/career/blob/main/Resume.md">Open Resume.md ↗</a><a class="contact-link" href={`${base}/experience`}>Read the web version →</a></div></div></section>
 </Layout>
