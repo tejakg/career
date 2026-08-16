@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { projects } from '../data/career';
 ---
-<Layout title="Projects | Teja Gowlla" description="Selected engineering projects in manufacturing automation, productivity, validation, supplier transition, simulation and AI-assisted engineering.">
+<Layout title="Projects | Teja K G" description="Selected engineering projects in manufacturing automation, productivity, validation, supplier transition, simulation and AI-assisted engineering.">
   <div class="page-intro"><div class="eyebrow">Projects</div><h1>Selected engineering problems.</h1><p>Projects are presented as problem, action and result. The interesting part is rarely the tool itself. It is what changed after the tool was used.</p></div>
   <section><div class="project-grid">{projects.map(p => <article class="project"><div class="eyebrow">{p.tag}</div><h2>{p.title}</h2><p><strong>Problem.</strong> {p.problem}</p><p><strong>Action.</strong> {p.action}</p><p class="result">Result. {p.result}</p></article>)}</div></section>
 </Layout>
