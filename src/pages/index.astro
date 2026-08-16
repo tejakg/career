@@ -1,14 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { projects, experience, skills } from '../data/career';
+const base = Astro.url.pathname === '/career' || Astro.url.pathname.startsWith('/career/') ? '/career' : '';
 ---
-<Layout title="Teja Gowlla | Manufacturing Engineering, Automation & Productivity" description="Engineer working across manufacturing productivity, automation, electronics, verification and validation, supplier engineering, and medical and semiconductor equipment.">
+<Layout title="Teja K G | Manufacturing Engineering, Automation & Productivity" description="Teja K G is an engineer working across manufacturing productivity, automation, electronics, verification and validation, supplier engineering, and complex hardware.">
   <section class="hero">
     <div>
       <div class="eyebrow">Manufacturing · Automation · Engineering Productivity</div>
       <h1>I solve manufacturing problems by combining engineering, automation and software.</h1>
-      <p class="lede">Teja Gowlla is an engineer working across mechanical manufacturing, productivity, automation, electronics, verification & validation, and supplier engineering for complex products.</p>
-      <div class="actions"><a class="button primary" href="/experience">View experience</a><a class="button" href="/resume">View resume</a></div>
+      <p class="lede">Teja K G is an engineer working across mechanical manufacturing, productivity, automation, electronics, verification & validation, and supplier engineering for complex products.</p>
+      <div class="actions"><a class="button primary" href={`${base}/experience`}>View experience</a><a class="button" href={`${base}/resume`}>View resume</a></div>
     </div>
   </section>
 
@@ -41,7 +42,7 @@ import { projects, experience, skills } from '../data/career';
     <div class="project-grid">
       {projects.map((project) => <article class="project"><div class="eyebrow">{project.tag}</div><h3>{project.title}</h3><p>{project.problem}</p><p class="result">{project.result}</p></article>)}
     </div>
-    <div class="actions"><a class="button" href="/projects">Explore engineering work →</a></div>
+    <div class="actions"><a class="button" href={`${base}/projects`}>Explore engineering work →</a></div>
   </section>
 
   <section aria-labelledby="experience">
@@ -49,7 +50,7 @@ import { projects, experience, skills } from '../data/career';
     <div class="timeline">
       {experience.slice(0,2).map((role) => <article class="role"><div class="meta"><strong>{role.company}</strong><br />{role.period}</div><div><h3>{role.role}</h3><p>{role.summary}</p></div></article>)}
     </div>
-    <div class="actions"><a class="button" href="/experience">Full experience →</a></div>
+    <div class="actions"><a class="button" href={`${base}/experience`}>Full experience →</a></div>
   </section>
 
   <section aria-labelledby="skills">
@@ -57,9 +58,9 @@ import { projects, experience, skills } from '../data/career';
     <div class="skill-grid">
       {Object.entries(skills).slice(0,4).map(([name, list]) => <div class="skill"><h3>{name}</h3><div class="pill-list">{list.map(item => <span class="pill">{item}</span>)}</div></div>)}
     </div>
-    <div class="actions"><a class="button" href="/skills">See all skills →</a></div>
+    <div class="actions"><a class="button" href={`${base}/skills`}>See all skills →</a></div>
   </section>
 
-  <section><div class="contact"><div><div class="section-kicker">Next</div><h2>Looking for hard engineering problems.</h2></div><div><p class="lede">Manufacturing automation, engineering productivity, semiconductor equipment, medical devices, supplier engineering and technical problem solving are where this experience is most useful.</p><div class="actions"><a class="button primary" href="/contact">Contact</a><a class="button" href="/resume">Resume</a></div></div></div></section>
-  <script type="application/ld+json" set:html={JSON.stringify({ '@context':'https://schema.org', '@type':'Person', name:'Teja Gowlla', url:'https://teja.gowlla.in', jobTitle:'Manufacturing / Productivity Engineer', knowsAbout:['Manufacturing Engineering','Engineering Productivity','Automation','Mechanical Engineering','Electronics','Verification and Validation','Supplier Engineering','Medical Devices','Semiconductor Manufacturing'] })} />
+  <section><div class="contact"><div><div class="section-kicker">Next</div><h2>Looking for hard engineering problems.</h2></div><div><p class="lede">Manufacturing automation, engineering productivity, semiconductor equipment, medical devices, supplier engineering and technical problem solving are where this experience is most useful.</p><div class="actions"><a class="button primary" href={`${base}/contact`}>Contact</a><a class="button" href={`${base}/resume`}>Resume</a></div></div></div></section>
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context':'https://schema.org', '@type':'Person', name:'Teja K G', url:'https://teja.gowlla.in', jobTitle:'Manufacturing / Productivity Engineer', knowsAbout:['Manufacturing Engineering','Engineering Productivity','Automation','Mechanical Engineering','Electronics','Verification and Validation','Supplier Engineering','Medical Devices','Semiconductor Manufacturing'] })} />
 </Layout>
