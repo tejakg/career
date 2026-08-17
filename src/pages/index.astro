@@ -2,18 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 import { projects, experience, skills } from '../data/career';
 ---
-<Layout title="Teja K G | Manufacturing Engineering, Automation & Productivity" description="Teja K G is an engineer working across manufacturing productivity, automation, electronics, verification and validation, supplier engineering, and complex hardware.">
-  <section class="hero">
+<Layout title="Teja K G | Manufacturing Engineer, Automation & Engineering Productivity" description="Teja K G is a manufacturing and engineering productivity engineer at GE HealthCare, with experience in semiconductor equipment, medical devices, manufacturing automation, Python test automation, V&V and supplier engineering.">
+  <section class="hero" aria-labelledby="hero-title">
     <div class="hero-copy">
-      <div class="eyebrow">Manufacturing · Automation · Engineering Productivity</div>
-      <h1>I solve manufacturing problems by combining engineering, automation and software.</h1>
-      <p class="lede">Teja K G is an engineer working across mechanical manufacturing, productivity, automation, electronics, verification & validation, and supplier engineering for complex products.</p>
-      <div class="actions"><a class="button primary" href="experience/">View experience</a><a class="button" href="resume/">View resume</a></div>
+      <div class="eyebrow">Manufacturing Engineer · Automation · Engineering Productivity</div>
+      <h1 id="hero-title">I solve manufacturing problems by combining engineering, automation and software.</h1>
+      <p class="lede">I work across <strong>manufacturing engineering, productivity, automation, electronics, verification &amp; validation, and supplier engineering</strong> for complex hardware in medical devices and semiconductor equipment.</p>
+      <div class="hero-proof" aria-label="Career snapshot"><span>GE HealthCare</span><span>Lam Research</span><span>Medical Devices</span><span>Semiconductor Equipment</span></div>
+      <div class="actions"><a class="button primary" href="experience/">View experience <span aria-hidden="true">→</span></a><a class="button" href="resume/">View resume</a></div>
+      <p class="microcopy">Manufacturing productivity · automation · V&amp;V · supplier engineering · cross-disciplinary problem solving</p>
     </div>
     <div class="hero-visual" aria-label="Engineering systems schematic">
       <span class="corner c1"></span><span class="corner c2"></span><span class="scanline"></span>
+      <div class="visual-status"><span class="status-dot"></span> ENGINEERING SYSTEMS / ACTIVE</div>
       <div class="schematic">
-        <svg viewBox="0 0 520 380" role="img" aria-label="Abstract manufacturing and automation system diagram">
+        <svg viewBox="0 0 520 380" role="img" aria-label="Engineering workflow connecting mechanical process, sensing, automation and validation">
           <defs><linearGradient id="wire" x1="0" x2="1"><stop stop-color="#78d5ff" stop-opacity=".18"/><stop offset=".5" stop-color="#78d5ff"/><stop offset="1" stop-color="#a5f3d0" stop-opacity=".18"/></linearGradient></defs>
           <g fill="none" stroke="#33414e" stroke-width="1"><path d="M40 70H480M40 190H480M40 310H480"/><path d="M90 35V345M260 35V345M430 35V345"/></g>
           <g fill="#0f161d" stroke="#78d5ff" stroke-width="2"><rect x="52" y="92" width="122" height="76" rx="10"/><rect x="198" y="152" width="126" height="76" rx="10"/><rect x="346" y="88" width="122" height="76" rx="10"/><rect x="198" y="278" width="126" height="56" rx="10"/></g>
@@ -25,6 +28,12 @@ import { projects, experience, skills } from '../data/career';
       </div>
       <div class="visual-caption"><span><strong>ENGINEERING SYSTEMS</strong><br/>Mechanical + electronics + software</span><span>01 / 06</span></div>
     </div>
+  </section>
+
+  <section class="trust-strip" aria-label="Career focus">
+    <div><span class="section-kicker">Focus</span><strong>Physical engineering problems</strong></div>
+    <div><span class="section-kicker">Method</span><strong>Measure → automate → validate</strong></div>
+    <div><span class="section-kicker">Domains</span><strong>Medical devices · semiconductor equipment</strong></div>
   </section>
 
   <section aria-labelledby="proof">
@@ -40,41 +49,44 @@ import { projects, experience, skills } from '../data/career';
   </section>
 
   <section aria-labelledby="what">
-    <div class="section-head"><div><div class="section-kicker">What I do</div><h2 id="what">Bridge the gaps between disciplines.</h2></div><p>The useful work often sits between boxes on an org chart. Mechanical constraints, electronics, software, manufacturing reality and validation have to agree.</p></div>
+    <div class="section-head"><div><div class="section-kicker">Capabilities</div><h2 id="what">A manufacturing engineer who crosses the boundaries.</h2></div><p>Mechanical constraints, electronics, software, manufacturing reality and validation have to agree. That intersection is where the useful work happens.</p></div>
     <div class="cap-grid">
-      <div class="cap"><h3>Manufacturing Productivity</h3><p>Find bottlenecks, reduce cycle time, eliminate wasted motion and turn process problems into measurable improvements.</p></div>
-      <div class="cap"><h3>Automation & Digital Engineering</h3><p>Automate repetitive testing and engineering workflows with Python, computer vision, AI/LLM approaches and simulation.</p></div>
-      <div class="cap"><h3>Product & Process Engineering</h3><p>Translate product requirements into practical assembly, fixture and manufacturing solutions.</p></div>
-      <div class="cap"><h3>Verification & Validation</h3><p>Lead hardware validation and risk-retirement work where evidence matters as much as the design.</p></div>
-      <div class="cap"><h3>Supplier Engineering</h3><p>Work directly with suppliers through prototypes, documentation, process transfer, V&V and manufacturing readiness.</p></div>
-      <div class="cap"><h3>Cross-functional Engineering</h3><p>Connect mechanical, electrical, software, manufacturing, quality and field teams to get difficult work finished.</p></div>
+      <div class="cap"><span class="cap-number">01</span><h3>Manufacturing Productivity</h3><p>Find bottlenecks, reduce cycle time, eliminate wasted work and turn process problems into measurable improvements.</p></div>
+      <div class="cap"><span class="cap-number">02</span><h3>Manufacturing Automation</h3><p>Automate repetitive testing and engineering workflows with Python, computer vision, AI/LLM approaches and simulation.</p></div>
+      <div class="cap"><span class="cap-number">03</span><h3>Product &amp; Process Engineering</h3><p>Translate product requirements into practical assembly, fixture and manufacturing solutions.</p></div>
+      <div class="cap"><span class="cap-number">04</span><h3>Verification &amp; Validation</h3><p>Lead hardware validation and risk-retirement work where evidence matters as much as the design.</p></div>
+      <div class="cap"><span class="cap-number">05</span><h3>Supplier Engineering</h3><p>Work with suppliers through prototypes, documentation, process transfer, V&amp;V and manufacturing readiness.</p></div>
+      <div class="cap"><span class="cap-number">06</span><h3>Electronics &amp; Software</h3><p>Connect mechanical hardware with electronics, firmware, test automation and software when the problem crosses disciplines.</p></div>
     </div>
   </section>
 
   <section aria-labelledby="work">
-    <div class="section-head"><div><div class="section-kicker">Selected work</div><h2 id="work">Five problems worth remembering.</h2></div><p>These are the projects that best explain how I think: understand the physical process, remove the bottleneck, automate where it helps, then prove the result.</p></div>
+    <div class="section-head"><div><div class="section-kicker">Selected work</div><h2 id="work">Five engineering problems worth remembering.</h2></div><p>Each project is framed as problem → engineering action → measurable result. The tool is secondary to what changed.</p></div>
     <div class="project-grid">
-      {projects.map((project) => <article class="project"><div class="eyebrow">{project.tag}</div><h3>{project.title}</h3><p>{project.problem}</p><p class="result">{project.result}</p></article>)}
+      {projects.map((project, index) => <article class="project"><div class="project-top"><span class="project-index">0{index + 1}</span><span class="eyebrow">{project.tag}</span></div><h3>{project.title}</h3><p>{project.problem}</p><p class="result">{project.result}</p></article>)}
     </div>
-    <div class="actions"><a class="button" href="projects/">Explore engineering work →</a></div>
+    <div class="actions"><a class="button" href="projects/">Explore engineering work <span aria-hidden="true">→</span></a></div>
   </section>
 
   <section aria-labelledby="experience">
     <div class="section-head"><div><div class="section-kicker">Experience</div><h2 id="experience">Semiconductor equipment to medical imaging.</h2></div><p>Experience spans manufacturing engineering, productivity, supplier transitions, validation and product engineering across complex hardware.</p></div>
     <div class="timeline">
-      {experience.slice(0,2).map((role) => <article class="role"><div class="meta"><strong>{role.company}</strong><br />{role.period}</div><div><h3>{role.role}</h3><p>{role.summary}</p></div></article>)}
+      {experience.slice(0,2).map((role, index) => <article class="role"><div class="meta"><span class="role-index">0{index + 1}</span><strong>{role.company}</strong><br />{role.period}</div><div><h3>{role.role}</h3><p>{role.summary}</p></div></article>)}
     </div>
-    <div class="actions"><a class="button" href="experience/">Full experience →</a></div>
+    <div class="actions"><a class="button" href="experience/">View full experience <span aria-hidden="true">→</span></a></div>
   </section>
 
   <section aria-labelledby="skills">
-    <div class="section-head"><div><div class="section-kicker">Technical stack</div><h2 id="skills">Tools are useful. Context is the differentiator.</h2></div><p>Capabilities are grouped by the engineering problem they support rather than turned into a meaningless proficiency scoreboard.</p></div>
+    <div class="section-head"><div><div class="section-kicker">Technical stack</div><h2 id="skills">Tools are useful. Context is the differentiator.</h2></div><p>Capabilities are grouped by engineering problem rather than turned into a meaningless proficiency scoreboard.</p></div>
     <div class="skill-grid">
       {Object.entries(skills).slice(0,4).map(([name, list]) => <div class="skill"><h3>{name}</h3><div class="pill-list">{list.map(item => <span class="pill">{item}</span>)}</div></div>)}
     </div>
-    <div class="actions"><a class="button" href="skills/">See all skills →</a></div>
+    <div class="actions"><a class="button" href="skills/">See full technical skills <span aria-hidden="true">→</span></a></div>
   </section>
 
-  <section><div class="contact"><div><div class="section-kicker">Next</div><h2>Looking for hard engineering problems.</h2></div><div><p class="lede">Manufacturing automation, engineering productivity, semiconductor equipment, medical devices, supplier engineering and technical problem solving are where this experience is most useful.</p><div class="actions"><a class="button primary" href="contact/">Contact</a><a class="button" href="resume/">Resume</a></div></div></div></section>
-  <script type="application/ld+json" set:html={JSON.stringify({ '@context':'https://schema.org', '@type':'Person', name:'Teja K G', url:'https://teja.gowlla.in', jobTitle:'Manufacturing / Productivity Engineer', knowsAbout:['Manufacturing Engineering','Engineering Productivity','Automation','Mechanical Engineering','Electronics','Verification and Validation','Supplier Engineering','Medical Devices','Semiconductor Manufacturing'] })} />
+  <section aria-labelledby="fit">
+    <div class="fit-panel"><div><div class="section-kicker">Where I fit</div><h2 id="fit">Roles where manufacturing depth and automation overlap.</h2></div><div class="fit-list"><span>Manufacturing Engineer</span><span>Manufacturing Automation Engineer</span><span>Engineering Productivity Engineer</span><span>Manufacturing Technology Engineer</span><span>Semiconductor Equipment Engineer</span><span>Medical Device Manufacturing / V&amp;V</span><span>Supplier Engineer</span><span>Product / Process Engineer</span></div></div>
+  </section>
+
+  <section class="final-cta"><div class="contact"><div><div class="section-kicker">Next</div><h2>Looking for hard engineering problems.</h2></div><div><p class="lede">Manufacturing automation, engineering productivity, semiconductor equipment, medical devices, supplier engineering and technical problem solving are where this experience is most useful.</p><div class="actions"><a class="button primary" href="contact/">Contact</a><a class="button" href="resume/">Resume</a></div></div></div></section>
 </Layout>
