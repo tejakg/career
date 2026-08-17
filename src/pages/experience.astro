@@ -1,10 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { experience } from '../data/career';
+import { experience, education } from '../data/career';
 ---
-<Layout title="Manufacturing Engineering Experience | Teja K G" description="Manufacturing engineering experience across semiconductor equipment and medical imaging, including productivity improvement, automation, supplier engineering, verification and validation, and product engineering.">
-  <div class="page-intro"><div class="eyebrow">Experience</div><h1>Manufacturing engineering work with measurable consequences.</h1><p>Experience across semiconductor equipment and medical imaging, with a focus on manufacturing productivity, automation, supplier transitions, verification and validation, and cross-functional engineering.</p></div>
+<Layout title="Experience | Teja K G | Manufacturing Engineering & Automation" description="Professional experience of Teja K G across GE HealthCare and Lam Research, spanning manufacturing engineering, productivity, automation, supplier engineering, semiconductor equipment and medical imaging.">
+  <div class="page-intro"><div class="eyebrow">Experience</div><h1>Five years solving manufacturing problems across complex hardware.</h1><p>From semiconductor equipment manufacturing to medical imaging, my work has moved from hands-on manufacturing engineering into variable-cost productivity, mechanical product engineering, supplier programs and V&amp;V.</p><div class="profile-meta"><span>Bengaluru, Karnataka</span><span>GE HealthCare</span><span>Lam Research</span><span>Medical Devices</span><span>Semiconductor Equipment</span></div></div>
   <section><div class="timeline">
-    {experience.map((role) => <article class="role"><div class="meta"><strong>{role.company}</strong><br />{role.period}</div><div><h2>{role.role}</h2><p>{role.summary}</p><ul>{role.bullets.map(b => <li>{b}</li>)}</ul></div></article>)}
+    {experience.map((role) => <article class="role"><div class="meta"><strong>{role.company}</strong><br/>{role.period}<br/>{role.location}</div><div><h2>{role.role}</h2><p>{role.summary}</p><ul>{role.bullets.map(b => <li>{b}</li>)}</ul></div></article>)}
   </div></section>
+  <section><div class="resume-card"><div class="section-kicker">Education</div><h2>{education.degree}</h2><p>{education.specialization} · {education.institution} · {education.location} · {education.year}</p></div></section>
 </Layout>
