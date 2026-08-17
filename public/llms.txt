@@ -1,46 +1,68 @@
 # Teja K G
 
-> Engineering portfolio for Teja K G, a manufacturing and engineering productivity engineer working across manufacturing, automation, mechanical engineering, electronics, verification and validation, and supplier engineering.
+> Professional engineering portfolio for Teja K G, a VCP Design Engineer - Mechanical at GE HealthCare in Bengaluru, working across manufacturing engineering, engineering productivity, automation, mechanical engineering, electronics, verification and validation, supplier engineering, medical devices and semiconductor equipment.
 
 ## Identity
 
 - Name: Teja K G
-- Website: https://teja.gowlla.in/
+- Current title: VCP Design Engineer - Mechanical
 - Current employer: GE HealthCare
-- Previous employer: Lam Research
+- Current location: Bengaluru, Karnataka, India
+- Website: https://teja.gowlla.in/
+- Email: teja@gowlla.in
+- LinkedIn: https://www.linkedin.com/in/tejakg/
+- GitHub: https://github.com/tejakg
+- Education: B.E. Mechanical Engineering, The National Institute of Engineering, Mysuru, 2021
 - Primary positioning: Manufacturing Engineering + Engineering Productivity + Automation
-- Target domains: semiconductor capital equipment, medical devices, industrial automation, manufacturing technology
+- Target domains: semiconductor equipment, medical devices, industrial automation, manufacturing technology
 
-## What Teja does
+## Professional identity
 
-Teja K G solves manufacturing and product-engineering problems by combining physical engineering with automation and software. His work spans manufacturing productivity, fixture development, hardware test automation, simulation, supplier transitions, verification and validation, electronics, firmware, and cross-functional technical problem solving.
+Teja K G is a mechanical and manufacturing engineer who solves physical manufacturing problems by combining engineering, automation, sensing, electronics and software. His differentiator is the ability to move across the mechanical-electrical-software boundary while keeping manufacturing reality and validation evidence central to the decision.
 
-## Measurable engineering impact
-
-- Reduced manufacturing cycle time by 90% using an IMU sensor-based fixture approach while generating more than $1M in annual savings.
-- Reduced hardware test cycles by 50% with Python-based test automation.
-- Reduced assembly trial-and-error time by 30% using DELMIA simulation.
-- Reduced wet-deposition tool cycle time by 5% using Value Stream Mapping and ZBRA matrix analysis.
-- Developed an AI/LLM-based Test Procedure Instruction automation concept with an estimated $120k/year saving opportunity.
-
-## Experience
+## Career timeline
 
 ### GE HealthCare
 
-Engineering / Manufacturing Engineering. Work includes medical imaging manufacturing engineering, supplier transitions, localization, verification and validation, prototype assembly, engineering documentation, risk-retirement testing, and customer-critical manufacturing problem solving for mobile radiography and mammography systems.
+VCP Design Engineer - Mechanical, Apr 2025 - Present, Bengaluru, Karnataka. Variable-cost productivity and mechanical engineering for medical imaging, including mobile radiography and mammography, supplier transition/localization, prototype assembly, V&V, risk retirement and customer-critical hardware problem solving.
+
+### Early-stage Engineering Startup
+
+Head of Engineering, Oct 2024 - Mar 2025, Mysuru, Karnataka. Led hands-on product engineering across electronics, PCB design, firmware development and early-stage hardware/product development.
 
 ### Lam Research
 
-Manufacturing Engineer. Work included semiconductor equipment manufacturing productivity, wet-deposition process improvement, IMU-based fixtures, hardware validation automation, DELMIA assembly simulation, and manufacturing project coordination.
+Manufacturing Engineer 2 (Senior Manufacturing Engineer), Mar 2024 - Oct 2024, Bengaluru, Karnataka. Manufacturing productivity, automation, fixture development, hardware testing, simulation and cross-functional engineering for semiconductor equipment.
 
-### Early-stage engineering startup
+### Lam Research
 
-Product / Electronics Engineering. Hands-on work across electronics, PCB design, firmware development, and early-stage product engineering.
+Manufacturing Engineer 1 (Manufacturing Engineer), Aug 2021 - Feb 2024, Bengaluru, Karnataka. Manufacturing productivity, precision fixtures, Python hardware validation automation, DELMIA simulation and semiconductor equipment manufacturing.
+
+### Lam Research
+
+Manufacturing Engineering Intern, Mar 2021 - Aug 2021, Bengaluru, Karnataka. Manufacturing engineering support and exposure to semiconductor equipment manufacturing processes.
+
+## Measurable engineering impact
+
+- Reduced manufacturing cycle time by 90% using an IMU-based manufacturing fixture, with more than $1M in annual savings.
+- Eliminated line-down events caused by the top-plate shaft jamming in the chamber-hole assembly condition described in the fixture case study.
+- Reduced hardware test cycles by 50% with Python-based hardware validation automation.
+- Reduced assembly trial-and-error time by 30% using DELMIA simulation.
+- Reduced wet-deposition tool cycle time by 5% using Value Stream Mapping and ZBRA matrix analysis.
+- Developed an AI/LLM-based Test Procedure Instruction automation solution with an estimated $120k/year saving opportunity.
+
+## Engineering case studies
+
+- IMU-Based Manufacturing Fixture: measured absolute top-plate and chamber position to quantify planar misalignment; validated with real assembly technicians; 90% cycle-time reduction and more than $1M annual savings.
+- Automated Hardware Validation: Python-based automation reduced hardware test cycles by 50%.
+- Assembly Workflow Simulation: DELMIA-based simulation reduced trial-and-error time by 30%.
+- Critical Mobile X-Ray Supplier Transition: supplier prototypes, documentation, V&V, risk retirement and fixture-based deferred assembly protected the customer commissioning timeline.
+- Test Procedure Instruction Automation: computer vision + LLM hackathon solution; finalist; estimated $120k/year opportunity.
 
 ## Core capabilities
 
 - Manufacturing engineering
-- Engineering productivity
+- Manufacturing productivity
 - Manufacturing automation
 - Fixture development
 - Supplier engineering and supplier transition
@@ -50,15 +72,20 @@ Product / Electronics Engineering. Hands-on work across electronics, PCB design,
 - Mechanical engineering
 - Electronics and PCB design
 - Firmware development
+- Sensor / IMU integration
 - Computer vision
 - AI / LLM engineering applications
 - DELMIA simulation
 - Medical-device engineering
 - Semiconductor equipment manufacturing
+- SEMI S2/S8 compliance-oriented testing
+- FDA 21 CFR Part 820 environment
+- ISO 13485 environment
+- IEC 60601 environment
 
-## Search topics this site is relevant to
+## Search topics
 
-Manufacturing Engineer, Manufacturing Automation Engineer, Engineering Productivity Engineer, Manufacturing Technology Engineer, Manufacturing Engineering, Semiconductor Manufacturing Engineer, Semiconductor Equipment Engineer, Medical Device Manufacturing Engineer, Verification and Validation Engineer, Supplier Engineer, Product Development Engineer, Mechanical Manufacturing Engineer, Engineering Automation, Python Test Automation, Manufacturing Productivity, DFM, fixture development, hardware validation.
+Manufacturing Engineer, Manufacturing Automation Engineer, Engineering Productivity Engineer, Manufacturing Technology Engineer, Manufacturing Systems Engineer, Semiconductor Manufacturing Engineer, Semiconductor Equipment Engineer, Medical Device Manufacturing Engineer, Manufacturing Test Engineer, Verification and Validation Engineer, Supplier Engineer, Mechanical Manufacturing Engineer, Process Engineer, Product Engineer, Engineering Automation, Python Test Automation, Manufacturing Productivity, fixture development, hardware validation, precision manufacturing, medical imaging manufacturing, semiconductor equipment manufacturing.
 
 ## Source pages
 
@@ -68,3 +95,7 @@ Manufacturing Engineer, Manufacturing Automation Engineer, Engineering Productiv
 - Skills: https://teja.gowlla.in/skills/
 - Resume: https://teja.gowlla.in/resume/
 - Contact: https://teja.gowlla.in/contact/
+- Manufacturing engineering: https://teja.gowlla.in/manufacturing-engineering/
+- Manufacturing automation: https://teja.gowlla.in/manufacturing-automation/
+- Semiconductor equipment: https://teja.gowlla.in/semiconductor-equipment/
+- Medical device engineering: https://teja.gowlla.in/medical-device-engineering/
