@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import LivePanel from '../components/LivePanel.astro';
 import { projects, experience, skills } from '../data/career';
 ---
 <Layout title="Teja K G | Manufacturing Engineer, Automation & Engineering Productivity" description="Teja K G is a manufacturing and engineering productivity engineer at GE HealthCare, with experience in semiconductor equipment, medical devices, manufacturing automation, Python test automation, V&V and supplier engineering.">
@@ -29,6 +30,8 @@ import { projects, experience, skills } from '../data/career';
       <div class="visual-caption"><span><strong>ENGINEERING SYSTEMS</strong><br/>Mechanical + electronics + software</span><span>01 / 06</span></div>
     </div>
   </section>
+
+  <LivePanel />
 
   <section class="trust-strip" aria-label="Career focus">
     <div><span class="section-kicker">Focus</span><strong>Physical engineering problems</strong></div>
