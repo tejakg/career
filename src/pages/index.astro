@@ -10,24 +10,80 @@ import { projects, experience, skills } from '../data/career';
       <h1 id="hero-title">I solve manufacturing problems by combining engineering, automation and software.</h1>
       <p class="lede">I work across <strong>manufacturing engineering, productivity, automation, electronics, verification &amp; validation, and supplier engineering</strong> for complex hardware in medical devices and semiconductor equipment.</p>
       <div class="hero-proof" aria-label="Career snapshot"><span>GE HealthCare</span><span>Lam Research</span><span>Medical Devices</span><span>Semiconductor Equipment</span></div>
-      <div class="actions"><a class="button primary" href="experience/">View experience <span aria-hidden="true">→</span></a><a class="button" href="resume/">View resume</a></div>
+      <div class="actions"><a class="button primary" href="/experience/">View experience <span aria-hidden="true">→</span></a><a class="button" href="/resume/">View resume</a></div>
       <p class="microcopy">Manufacturing productivity · automation · V&amp;V · supplier engineering · cross-disciplinary problem solving</p>
     </div>
-    <div class="hero-visual" aria-label="Engineering systems schematic">
-      <span class="corner c1"></span><span class="corner c2"></span><span class="scanline"></span>
-      <div class="visual-status"><span class="status-dot"></span> ENGINEERING SYSTEMS / ACTIVE</div>
-      <div class="schematic">
-        <svg viewBox="0 0 520 380" role="img" aria-label="Engineering workflow connecting mechanical process, sensing, automation and validation">
-          <defs><linearGradient id="wire" x1="0" x2="1"><stop stop-color="#78d5ff" stop-opacity=".18"/><stop offset=".5" stop-color="#78d5ff"/><stop offset="1" stop-color="#a5f3d0" stop-opacity=".18"/></linearGradient></defs>
-          <g fill="none" stroke="#33414e" stroke-width="1"><path d="M40 70H480M40 190H480M40 310H480"/><path d="M90 35V345M260 35V345M430 35V345"/></g>
-          <g fill="#0f161d" stroke="#78d5ff" stroke-width="2"><rect x="52" y="92" width="122" height="76" rx="10"/><rect x="198" y="152" width="126" height="76" rx="10"/><rect x="346" y="88" width="122" height="76" rx="10"/><rect x="198" y="278" width="126" height="56" rx="10"/></g>
-          <g fill="#f4f7fa" font-family="ui-monospace,monospace" font-size="12"><text x="72" y="122">MECHANICAL</text><text x="72" y="144" fill="#9ba8b5">PROCESS</text><text x="222" y="182">SENSING</text><text x="222" y="204" fill="#9ba8b5">IMU / TEST</text><text x="370" y="118">AUTOMATION</text><text x="370" y="140" fill="#9ba8b5">PYTHON / AI</text><text x="222" y="313">VALIDATION</text></g>
-          <g fill="none" stroke="url(#wire)" stroke-width="2.5"><path d="M174 130H230V190H198"/><path d="M324 190H370V126H346"/><path d="M261 228V278"/><path d="M324 306H410V164"/></g>
-          <g fill="#78d5ff"><circle cx="174" cy="130" r="4"/><circle cx="198" cy="190" r="4"/><circle cx="324" cy="190" r="4"/><circle cx="346" cy="126" r="4"/><circle cx="261" cy="278" r="4"/><circle cx="410" cy="164" r="4"/></g>
-          <g fill="#9ba8b5" font-family="ui-monospace,monospace" font-size="10"><text x="48" y="362">SYSTEM VIEW / 01</text><text x="398" y="362">IMPACT: MEASURED</text></g>
+
+    <div class="hero-visual engineering-visual" aria-label="Animated engineering systems schematic">
+      <div class="visual-status"><span class="status-dot"></span> ENGINEERING SYSTEMS <span class="status-live">LIVE</span></div>
+      <div class="schematic-stage">
+        <div class="radar-ring ring-a" aria-hidden="true"></div>
+        <div class="radar-ring ring-b" aria-hidden="true"></div>
+        <div class="radar-sweep" aria-hidden="true"></div>
+        <svg viewBox="0 0 520 330" role="img" aria-label="Animated workflow connecting mechanical process, sensing, automation and validation">
+          <defs>
+            <linearGradient id="wire" x1="0" x2="1">
+              <stop stop-color="#78d5ff" stop-opacity=".15"/>
+              <stop offset=".5" stop-color="#78d5ff"/>
+              <stop offset="1" stop-color="#a5f3d0" stop-opacity=".25"/>
+            </linearGradient>
+            <filter id="nodeGlow" x="-100%" y="-100%" width="300%" height="300%">
+              <feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <path id="flow-one" d="M174 112 H230 V165 H198"/>
+            <path id="flow-two" d="M324 165 H370 V108 H346"/>
+            <path id="flow-three" d="M261 202 V236"/>
+            <path id="flow-four" d="M324 264 H410 V146"/>
+          </defs>
+
+          <g class="schematic-grid" fill="none" stroke="#33414e" stroke-width="1">
+            <path d="M38 56H482M38 165H482M38 274H482"/>
+            <path d="M88 28V300M260 28V300M432 28V300"/>
+          </g>
+
+          <g class="wire-layer" fill="none" stroke="url(#wire)" stroke-width="2.5" stroke-linecap="round">
+            <use href="#flow-one" class="flow-wire"/>
+            <use href="#flow-two" class="flow-wire"/>
+            <use href="#flow-three" class="flow-wire"/>
+            <use href="#flow-four" class="flow-wire"/>
+          </g>
+
+          <g class="system-node" fill="#0d151d" stroke="#78d5ff" stroke-width="2">
+            <rect x="52" y="74" width="122" height="76" rx="12"/>
+            <rect x="198" y="127" width="126" height="76" rx="12"/>
+            <rect x="346" y="70" width="122" height="76" rx="12"/>
+            <rect x="198" y="236" width="126" height="56" rx="12"/>
+          </g>
+
+          <g class="node-label" fill="#f4f7fa" font-family="ui-monospace,monospace" font-size="12">
+            <text x="72" y="104">MECHANICAL</text><text x="72" y="126" fill="#9ba8b5">PROCESS</text>
+            <text x="222" y="157">SENSING</text><text x="222" y="179" fill="#9ba8b5">IMU / TEST</text>
+            <text x="370" y="100">AUTOMATION</text><text x="370" y="122" fill="#9ba8b5">PYTHON / AI</text>
+            <text x="222" y="270">VALIDATION</text>
+          </g>
+
+          <g class="connection-nodes" fill="#78d5ff" filter="url(#nodeGlow)">
+            <circle cx="174" cy="112" r="4"/><circle cx="198" cy="165" r="4"/>
+            <circle cx="324" cy="165" r="4"/><circle cx="346" cy="108" r="4"/>
+            <circle cx="261" cy="236" r="4"/><circle cx="410" cy="146" r="4"/>
+          </g>
+
+          <g class="flow-packets" fill="#ffffff" filter="url(#nodeGlow)">
+            <circle r="3.5"><animateMotion dur="2.8s" repeatCount="indefinite"><mpath href="#flow-one"/></animateMotion></circle>
+            <circle r="3.5"><animateMotion dur="3.2s" begin=".6s" repeatCount="indefinite"><mpath href="#flow-two"/></animateMotion></circle>
+            <circle r="3.5"><animateMotion dur="2.2s" begin="1.1s" repeatCount="indefinite"><mpath href="#flow-three"/></animateMotion></circle>
+            <circle r="3.5"><animateMotion dur="3.6s" begin="1.7s" repeatCount="indefinite"><mpath href="#flow-four"/></animateMotion></circle>
+          </g>
+
+          <g class="schematic-meta" fill="#82909e" font-family="ui-monospace,monospace" font-size="10">
+            <text x="40" y="316">SYSTEM VIEW / 01</text><text x="400" y="316">IMPACT: MEASURED</text>
+          </g>
         </svg>
       </div>
-      <div class="visual-caption"><span><strong>ENGINEERING SYSTEMS</strong><br/>Mechanical + electronics + software</span><span>01 / 06</span></div>
+      <div class="visual-caption">
+        <div><strong>ENGINEERING SYSTEMS</strong><span>Mechanical + electronics + software</span></div>
+        <span class="visual-counter">01 / 06</span>
+      </div>
     </div>
   </section>
 
@@ -68,7 +124,7 @@ import { projects, experience, skills } from '../data/career';
     <div class="project-grid">
       {projects.map((project, index) => <article class="project"><div class="project-top"><span class="project-index">0{index + 1}</span><span class="eyebrow">{project.tag}</span></div><h3>{project.title}</h3><p>{project.problem}</p><p class="result">{project.result}</p></article>)}
     </div>
-    <div class="actions"><a class="button" href="projects/">Explore engineering work <span aria-hidden="true">→</span></a></div>
+    <div class="actions"><a class="button" href="/projects/">Explore engineering work <span aria-hidden="true">→</span></a></div>
   </section>
 
   <section aria-labelledby="experience">
@@ -76,7 +132,7 @@ import { projects, experience, skills } from '../data/career';
     <div class="timeline">
       {experience.slice(0,2).map((role, index) => <article class="role"><div class="meta"><span class="role-index">0{index + 1}</span><strong>{role.company}</strong><br />{role.period}</div><div><h3>{role.role}</h3><p>{role.summary}</p></div></article>)}
     </div>
-    <div class="actions"><a class="button" href="experience/">View full experience <span aria-hidden="true">→</span></a></div>
+    <div class="actions"><a class="button" href="/experience/">View full experience <span aria-hidden="true">→</span></a></div>
   </section>
 
   <section aria-labelledby="skills">
@@ -84,12 +140,12 @@ import { projects, experience, skills } from '../data/career';
     <div class="skill-grid">
       {Object.entries(skills).slice(0,4).map(([name, list]) => <div class="skill"><h3>{name}</h3><div class="pill-list">{list.map(item => <span class="pill">{item}</span>)}</div></div>)}
     </div>
-    <div class="actions"><a class="button" href="skills/">See full technical skills <span aria-hidden="true">→</span></a></div>
+    <div class="actions"><a class="button" href="/skills/">See full technical skills <span aria-hidden="true">→</span></a></div>
   </section>
 
   <section aria-labelledby="fit">
     <div class="fit-panel"><div><div class="section-kicker">Where I fit</div><h2 id="fit">Roles where manufacturing depth and automation overlap.</h2></div><div class="fit-list"><span>Manufacturing Engineer</span><span>Manufacturing Automation Engineer</span><span>Engineering Productivity Engineer</span><span>Manufacturing Technology Engineer</span><span>Semiconductor Equipment Engineer</span><span>Medical Device Manufacturing / V&amp;V</span><span>Supplier Engineer</span><span>Product / Process Engineer</span></div></div>
   </section>
 
-  <section class="final-cta"><div class="contact"><div><div class="section-kicker">Next</div><h2>Looking for hard engineering problems.</h2></div><div><p class="lede">Manufacturing automation, engineering productivity, semiconductor equipment, medical devices, supplier engineering and technical problem solving are where this experience is most useful.</p><div class="actions"><a class="button primary" href="contact/">Contact</a><a class="button" href="resume/">Resume</a></div></div></div></section>
+  <section class="final-cta"><div class="contact"><div><div class="section-kicker">Next</div><h2>Looking for hard engineering problems.</h2></div><div><p class="lede">Manufacturing automation, engineering productivity, semiconductor equipment, medical devices, supplier engineering and technical problem solving are where this experience is most useful.</p><div class="actions"><a class="button primary" href="/contact/">Contact</a><a class="button" href="/resume/">Resume</a></div></div></div></section>
 </Layout>
