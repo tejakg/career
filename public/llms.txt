@@ -1,0 +1,70 @@
+# Teja K G
+
+> Engineering portfolio for Teja K G, a manufacturing and engineering productivity engineer working across manufacturing, automation, mechanical engineering, electronics, verification and validation, and supplier engineering.
+
+## Identity
+
+- Name: Teja K G
+- Website: https://teja.gowlla.in/
+- Current employer: GE HealthCare
+- Previous employer: Lam Research
+- Primary positioning: Manufacturing Engineering + Engineering Productivity + Automation
+- Target domains: semiconductor capital equipment, medical devices, industrial automation, manufacturing technology
+
+## What Teja does
+
+Teja K G solves manufacturing and product-engineering problems by combining physical engineering with automation and software. His work spans manufacturing productivity, fixture development, hardware test automation, simulation, supplier transitions, verification and validation, electronics, firmware, and cross-functional technical problem solving.
+
+## Measurable engineering impact
+
+- Reduced manufacturing cycle time by 90% using an IMU sensor-based fixture approach while generating more than $1M in annual savings.
+- Reduced hardware test cycles by 50% with Python-based test automation.
+- Reduced assembly trial-and-error time by 30% using DELMIA simulation.
+- Reduced wet-deposition tool cycle time by 5% using Value Stream Mapping and ZBRA matrix analysis.
+- Developed an AI/LLM-based Test Procedure Instruction automation concept with an estimated $120k/year saving opportunity.
+
+## Experience
+
+### GE HealthCare
+
+Engineering / Manufacturing Engineering. Work includes medical imaging manufacturing engineering, supplier transitions, localization, verification and validation, prototype assembly, engineering documentation, risk-retirement testing, and customer-critical manufacturing problem solving for mobile radiography and mammography systems.
+
+### Lam Research
+
+Manufacturing Engineer. Work included semiconductor equipment manufacturing productivity, wet-deposition process improvement, IMU-based fixtures, hardware validation automation, DELMIA assembly simulation, and manufacturing project coordination.
+
+### Early-stage engineering startup
+
+Product / Electronics Engineering. Hands-on work across electronics, PCB design, firmware development, and early-stage product engineering.
+
+## Core capabilities
+
+- Manufacturing engineering
+- Engineering productivity
+- Manufacturing automation
+- Fixture development
+- Supplier engineering and supplier transition
+- Verification and validation
+- Hardware test automation
+- Python
+- Mechanical engineering
+- Electronics and PCB design
+- Firmware development
+- Computer vision
+- AI / LLM engineering applications
+- DELMIA simulation
+- Medical-device engineering
+- Semiconductor equipment manufacturing
+
+## Search topics this site is relevant to
+
+Manufacturing Engineer, Manufacturing Automation Engineer, Engineering Productivity Engineer, Manufacturing Technology Engineer, Manufacturing Engineering, Semiconductor Manufacturing Engineer, Semiconductor Equipment Engineer, Medical Device Manufacturing Engineer, Verification and Validation Engineer, Supplier Engineer, Product Development Engineer, Mechanical Manufacturing Engineer, Engineering Automation, Python Test Automation, Manufacturing Productivity, DFM, fixture development, hardware validation.
+
+## Source pages
+
+- Home: https://teja.gowlla.in/
+- Experience: https://teja.gowlla.in/experience/
+- Projects: https://teja.gowlla.in/projects/
+- Skills: https://teja.gowlla.in/skills/
+- Resume: https://teja.gowlla.in/resume/
+- Contact: https://teja.gowlla.in/contact/
