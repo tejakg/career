@@ -15,7 +15,8 @@ const root = Astro.url.pathname === '/' ? './' : '../';
       {items.map(([href, label]) => {
         const target = href ? `${root}${href}` : root;
         const normalizedTarget = target.replace(/\/+$/, '') || '/';
-        return <a href={target} class={current === normalizedTarget ? 'active' : ''}>{label}</a>;
+        const active = current === normalizedTarget;
+        return <a href={target} class={active ? 'active' : ''} aria-current={active ? 'page' : undefined}>{label}</a>;
       })}
     </nav>
   </div>
