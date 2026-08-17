@@ -1,18 +1,22 @@
 ---
-interface Props { base?: string; }
-const { base = '' } = Astro.props;
 const items = [
-  ['', 'Home'], ['/experience/', 'Experience'], ['/projects/', 'Projects'], ['/skills/', 'Skills'], ['/resume/', 'Resume'], ['/contact/', 'Contact']
+  ['', 'Home'], ['experience/', 'Experience'], ['projects/', 'Projects'], ['skills/', 'Skills'], ['resume/', 'Resume'], ['contact/', 'Contact']
 ];
 const current = Astro.url.pathname.replace(/\/+$/, '') || '/';
+const root = Astro.url.pathname === '/' ? './' : '../';
 ---
 <header class="site-header">
-  <a class="brand" href={`${base}/`} aria-label="Teja K G home"><span class="brand-mark">TG</span><span>Teja K G</span></a>
-  <nav aria-label="Primary navigation">
-    {items.map(([href, label]) => {
-      const target = `${base}${href || '/'}`;
-      const normalizedTarget = target.replace(/\/+$/, '') || '/';
-      return <a href={target} class={current === normalizedTarget ? 'active' : ''}>{label}</a>;
-    })}
-  </nav>
+  <div class="header-inner">
+    <a class="brand" href={root} aria-label="Teja K G home">
+      <span class="brand-mark" aria-hidden="true">TG</span>
+      <span class="brand-name">Teja K G</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      {items.map(([href, label]) => {
+        const target = href ? `${root}${href}` : root;
+        const normalizedTarget = target.replace(/\/+$/, '') || '/';
+        return <a href={target} class={current === normalizedTarget ? 'active' : ''}>{label}</a>;
+      })}
+    </nav>
+  </div>
 </header>
