@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.astro';
+import { ClientRouter } from 'astro:transitions';
 
 export interface Props { title: string; description: string; path?: string; image?: string; }
 const { title, description, path = Astro.url.pathname, image = '/og-image.svg' } = Astro.props;
@@ -14,34 +15,14 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Person',
-      '@id': 'https://teja.gowlla.in/#person',
-      name: 'Teja K G',
-      url: 'https://teja.gowlla.in/',
-      image: socialImage,
+      '@type': 'Person', '@id': 'https://teja.gowlla.in/#person', name: 'Teja K G', url: 'https://teja.gowlla.in/', image: socialImage,
       jobTitle: 'Manufacturing / Engineering Productivity Engineer',
       description: 'Engineer working across manufacturing engineering, engineering productivity, automation, mechanical engineering, electronics, verification and validation, supplier engineering, medical devices and semiconductor equipment.',
-      worksFor: { '@type': 'Organization', name: 'GE HealthCare' },
-      sameAs: ['https://github.com/tejakg'],
+      worksFor: { '@type': 'Organization', name: 'GE HealthCare' }, sameAs: ['https://github.com/tejakg'],
       knowsAbout: ['Manufacturing Engineering','Engineering Productivity','Manufacturing Automation','Mechanical Engineering','Electronics','Python','Hardware Test Automation','Verification and Validation','Supplier Engineering','Medical Devices','Semiconductor Manufacturing','Fixture Development','DELMIA Simulation','AI and LLM Engineering']
     },
-    {
-      '@type': 'WebSite',
-      '@id': 'https://teja.gowlla.in/#website',
-      url: 'https://teja.gowlla.in/',
-      name: siteName,
-      description: 'Professional engineering portfolio of Teja K G.',
-      publisher: { '@id': 'https://teja.gowlla.in/#person' }
-    },
-    {
-      '@type': isHome ? 'ProfilePage' : 'WebPage',
-      '@id': `${canonical.toString()}#webpage`,
-      url: canonical.toString(),
-      name: title,
-      description,
-      isPartOf: { '@id': 'https://teja.gowlla.in/#website' },
-      ...(isHome ? { mainEntity: { '@id': 'https://teja.gowlla.in/#person' } } : {})
-    }
+    { '@type': 'WebSite', '@id': 'https://teja.gowlla.in/#website', url: 'https://teja.gowlla.in/', name: siteName, description: 'Professional engineering portfolio of Teja K G.', publisher: { '@id': 'https://teja.gowlla.in/#person' } },
+    { '@type': isHome ? 'ProfilePage' : 'WebPage', '@id': `${canonical.toString()}#webpage`, url: canonical.toString(), name: title, description, isPartOf: { '@id': 'https://teja.gowlla.in/#website' }, ...(isHome ? { mainEntity: { '@id': 'https://teja.gowlla.in/#person' } } : {}) }
   ]
 };
 ---
@@ -56,32 +37,25 @@ const jsonLd = {
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical.toString()} />
     <link rel="alternate" type="text/plain" href={`${root}llms.txt`} title="AI-readable profile summary" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content={siteName} />
-    <meta property="og:locale" content="en_IN" />
-    <meta property="og:url" content={canonical.toString()} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={socialImage} />
-    <meta property="og:image:alt" content="Teja K G, manufacturing and engineering productivity engineer" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={socialImage} />
-    <meta name="theme-color" content="#090d12" />
-    <meta name="color-scheme" content="dark" />
-    <link rel="icon" href={favicon} type="image/svg+xml" />
-    <link rel="stylesheet" href={stylesheet} />
+    <meta property="og:type" content="website" /><meta property="og:site_name" content={siteName} /><meta property="og:locale" content="en_IN" />
+    <meta property="og:url" content={canonical.toString()} /><meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:image" content={socialImage} /><meta property="og:image:alt" content="Teja K G, manufacturing and engineering productivity engineer" />
+    <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={title} /><meta name="twitter:description" content={description} /><meta name="twitter:image" content={socialImage} />
+    <meta name="theme-color" content="#090d12" /><meta name="color-scheme" content="dark" />
+    <link rel="icon" href={favicon} type="image/svg+xml" /><link rel="stylesheet" href={stylesheet} />
+    <ClientRouter />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body>
+    <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <Header />
     <div class="page-grid" aria-hidden="true"></div>
     <main id="main-content"><slot /></main>
-    <footer class="site-footer">
-      <div><strong>Teja K G</strong><span> · Manufacturing Engineering · Automation · Engineering Productivity</span></div>
-      <div class="footer-links"><a href="https://github.com/tejakg" rel="me">GitHub</a><span>·</span><span>© {new Date().getFullYear()}</span></div>
-    </footer>
+    <footer class="site-footer"><div><strong>Teja K G</strong><span> · Manufacturing Engineering · Automation · Engineering Productivity</span></div><div class="footer-links"><a href="https://github.com/tejakg" rel="me">GitHub</a><span>·</span><span>© {new Date().getFullYear()}</span></div></footer>
+    <script>
+      const updateProgress = () => { const max = document.documentElement.scrollHeight - window.innerHeight; const pct = max > 0 ? (window.scrollY / max) * 100 : 0; document.getElementById('scroll-progress-bar')?.setAttribute('style', `width:${pct}%`); };
+      window.addEventListener('scroll', updateProgress, { passive: true }); updateProgress();
+      document.addEventListener('astro:after-swap', updateProgress);
+    </script>
   </body>
 </html>

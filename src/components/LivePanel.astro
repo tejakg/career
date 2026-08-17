@@ -1,0 +1,50 @@
+---
+const metrics = [
+  { value: 90, suffix: '%', label: 'cycle-time reduction', detail: 'IMU-based fixture' },
+  { value: 50, suffix: '%', label: 'test-cycle reduction', detail: 'Python automation' },
+  { value: 30, suffix: '%', label: 'less trial-and-error', detail: 'DELMIA simulation' },
+  { value: 100, suffix: 'M+', label: 'annual savings', detail: 'fixture improvement', prefix: '$' }
+];
+---
+<section class="live-panel" aria-labelledby="live-title">
+  <div class="live-header">
+    <div><div class="section-kicker">Live profile</div><h2 id="live-title">Explore the engineering signal.</h2></div>
+    <div class="live-status"><span class="status-dot"></span> Interactive / client-side</div>
+  </div>
+  <div class="metric-grid">
+    {metrics.map((metric) => <div class="metric-card"><div class="metric-value"><span class="metric-prefix">{metric.prefix}</span><span class="metric-number" data-target={metric.value}>0</span>{metric.suffix}</div><strong>{metric.label}</strong><span>{metric.detail}</span></div>)}
+  </div>
+  <div class="profile-console">
+    <div class="console-top"><span>ENGINEERING INDEX</span><span>FILTER / {new Date().getFullYear()}</span></div>
+    <div class="filter-row" role="group" aria-label="Filter engineering focus">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="manufacturing">Manufacturing</button>
+      <button class="filter" data-filter="automation">Automation</button>
+      <button class="filter" data-filter="validation">V&amp;V</button>
+      <button class="filter" data-filter="supplier">Supplier</button>
+    </div>
+    <div class="signal-grid">
+      <article class="signal" data-tags="manufacturing"><span>01</span><h3>Manufacturing productivity</h3><p>Cycle-time reduction, fixture design, process improvement and cost reduction.</p></article>
+      <article class="signal" data-tags="automation"><span>02</span><h3>Engineering automation</h3><p>Python, hardware test automation, computer vision and AI-assisted workflows.</p></article>
+      <article class="signal" data-tags="validation"><span>03</span><h3>Verification &amp; validation</h3><p>Hardware validation, risk retirement, documentation and compliance-oriented engineering.</p></article>
+      <article class="signal" data-tags="supplier validation"><span>04</span><h3>Supplier engineering</h3><p>Prototype builds, supplier transfer, localization and manufacturing readiness.</p></article>
+    </div>
+    <div class="console-footer"><span id="signal-count">4 signals</span><span>Tip: use the filters to inspect the engineering mix.</span></div>
+  </div>
+</section>
+<script>
+  const animateMetrics = () => document.querySelectorAll<HTMLElement>('.metric-number').forEach((el) => {
+    const target = Number(el.dataset.target || 0); const start = performance.now(); const duration = 900;
+    const tick = (now: number) => { const p = Math.min((now - start) / duration, 1); const eased = 1 - Math.pow(1 - p, 3); el.textContent = Math.round(target * eased).toString(); if (p < 1) requestAnimationFrame(tick); };
+    requestAnimationFrame(tick);
+  });
+  const initFilters = () => document.querySelectorAll<HTMLButtonElement>('.filter').forEach((button) => button.addEventListener('click', () => {
+    const filter = button.dataset.filter || 'all';
+    document.querySelectorAll('.filter').forEach((b) => b.classList.remove('active')); button.classList.add('active');
+    let visible = 0;
+    document.querySelectorAll<HTMLElement>('.signal').forEach((card) => { const show = filter === 'all' || (card.dataset.tags || '').split(' ').includes(filter); card.hidden = !show; if (show) visible++; });
+    const count = document.getElementById('signal-count'); if (count) count.textContent = `${visible} signal${visible === 1 ? '' : 's'}`;
+  }));
+  const init = () => { animateMetrics(); initFilters(); };
+  init(); document.addEventListener('astro:after-swap', init);
+</script>
