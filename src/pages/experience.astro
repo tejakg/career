@@ -2,8 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import { experience } from '../data/career';
 ---
-<Layout title="Experience | Teja K G" description="Engineering experience across semiconductor equipment, medical imaging, manufacturing productivity, automation, supplier engineering, and validation.">
-  <div class="page-intro"><div class="eyebrow">Experience</div><h1>Engineering work with measurable consequences.</h1><p>Not a resume dump. The through-line is practical problem solving across manufacturing, automation, validation and suppliers.</p></div>
+<Layout title="Manufacturing Engineering Experience | Teja K G" description="Manufacturing engineering experience across semiconductor equipment and medical imaging, including productivity improvement, automation, supplier engineering, verification and validation, and product engineering.">
+  <div class="page-intro"><div class="eyebrow">Experience</div><h1>Manufacturing engineering work with measurable consequences.</h1><p>Experience across semiconductor equipment and medical imaging, with a focus on manufacturing productivity, automation, supplier transitions, verification and validation, and cross-functional engineering.</p></div>
   <section><div class="timeline">
     {experience.map((role) => <article class="role"><div class="meta"><strong>{role.company}</strong><br />{role.period}</div><div><h2>{role.role}</h2><p>{role.summary}</p><ul>{role.bullets.map(b => <li>{b}</li>)}</ul></div></article>)}
   </div></section>
